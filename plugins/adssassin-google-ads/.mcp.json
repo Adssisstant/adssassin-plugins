@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "adssassin-google-ads": {
+      "type": "http",
+      "url": "https://mcp.adssassin.ai/mcp"
+    }
+  }
+}

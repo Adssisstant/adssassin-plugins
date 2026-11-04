@@ -1,0 +1,12 @@
+{
+  "name": "adssassin",
+  "description": "Adssassin — Google Ads workflows and the hosted MCP, for your own AI.",
+  "owner": { "name": "Adssassin", "url": "https://adssassin.ai" },
+  "plugins": [
+    {
+      "name": "adssassin-google-ads",
+      "source": "./plugins/adssassin-google-ads",
+      "description": "Google Ads audits, wasted-spend sweeps, campaign builds, and ad copy through the Adssassin MCP — in your own AI."
+    }
+  ]
+}
