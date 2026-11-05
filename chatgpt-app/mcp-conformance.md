@@ -39,13 +39,15 @@ Legend: ✅ done · **[GAP]** needs work · **[VERIFY]** confirm against docs ·
 ---
 
 ## Open items to close before submitting
-1. **[GAP]** Produce a **square app icon** (512×512 PNG) — none in repo yet.
-2. **[VERIFY]** Confirm OpenAI account/workspace **eligibility to submit** an app.
-3. **[VERIFY]** Confirm the server exposes the **name/description/icon** the directory reads, in the place the Apps SDK expects.
-4. **[DECISION]** Curate the **tool subset** for the app (vs. all ~150), if the docs/limits call for it.
-5. **[DECISION]** Make the **Google connect** step reachable from inside ChatGPT for a web-free onboarding.
-6. **[VERIFY]** PKCE + DCR complete cleanly with ChatGPT as the client (do a real connect test from ChatGPT before recording the video).
+> Current status of all six is tracked in [`STATUS.md`](./STATUS.md). Summary:
+
+1. ✅ **Square app icon** — produced: `assets/adssassin-icon-{1024,512,256}.png`.
+2. **[VERIFY — you]** Confirm OpenAI account/workspace **eligibility to submit** an app.
+3. **[VERIFY]** Confirm the server exposes the **name/description/icon** the directory reads, in the place the Apps SDK expects (the icon can also be uploaded on the form).
+4. **[DECISION]** Curate the **tool subset** for the app (vs. all ~150) only if a directory limit/testing calls for it — see [`tool-profile.md`](./tool-profile.md). No global change made.
+5. ✅ **Google connect reachable in-chat** — resolved. `effectiveCredentials()` (`src/util/tenantContext.ts`) throws an actionable error containing the user's `/connect` link whenever Google isn't connected, so ChatGPT guides them automatically. Show it in the demo.
+6. ✅ **OAuth discovery present (code-verified)** — `/.well-known/oauth-protected-resource[/mcp]` + `/.well-known/oauth-authorization-server` (Clerk, DCR). Remaining: one real connect test from ChatGPT before recording.
 7. **Fast-follow:** the **approval-card widget** (optional, high-value).
 
-None of 1–6 are large; the OAuth + confirmation foundations — usually the hard
-part — are already in production.
+The OAuth + confirmation + in-chat-connect foundations — usually the hard part —
+are already in production; the remaining work is account/form steps + the video.

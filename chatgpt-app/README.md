@@ -34,12 +34,23 @@ The hard parts are already done and in production:
 | Website / Support / Privacy / Terms URLs | ✅ all four exist (see `listing.md`) |
 | A domain you control for verification | ✅ `adssassin.ai` |
 
-## What still has to be produced (and where it lives here)
-1. **Listing metadata** — name, descriptions, category, the 4 URLs, logo → [`listing.md`](./listing.md)
-2. **Test cases** — the positive + negative cases the review requires → [`test-cases.md`](./test-cases.md)
-3. **Demo video** — reviewer-facing walkthrough → script in [`demo-video-script.md`](./demo-video-script.md)
-4. **Domain verification** — prove you own `adssassin.ai` → [`domain-verification.md`](./domain-verification.md)
-5. **MCP / Apps SDK conformance** — the technical audit + open decisions → [`mcp-conformance.md`](./mcp-conformance.md)
+## Current status
+See [`STATUS.md`](./STATUS.md) for the live state of the six pre-submission
+items. Short version: the **icon is done** (`assets/`), **in-chat Google
+connect** and **OAuth discovery** are already handled in the live MCP, **domain
+verification** is scaffolded (set one env var), **tool curation** is a documented
+decision, and only **OpenAI-account eligibility + the form/video** are left for
+you.
+
+## Contents
+1. **Status of the 6 items** → [`STATUS.md`](./STATUS.md)
+2. **Listing metadata** — name, descriptions, category, the 4 URLs, logo → [`listing.md`](./listing.md)
+3. **Test cases** — the positive + negative cases the review requires → [`test-cases.md`](./test-cases.md)
+4. **Demo video** — reviewer-facing walkthrough → script in [`demo-video-script.md`](./demo-video-script.md)
+5. **Domain verification** — prove you own `adssassin.ai` → [`domain-verification.md`](./domain-verification.md)
+6. **Tool profile** — full set vs. curated subset (decision) → [`tool-profile.md`](./tool-profile.md)
+7. **MCP / Apps SDK conformance** — the technical audit → [`mcp-conformance.md`](./mcp-conformance.md)
+8. **App icon** — `assets/adssassin-icon-{1024,512,256}.png`
 
 ## Suggested order of operations
 1. Read [`mcp-conformance.md`](./mcp-conformance.md) and close any **[GAP]** items on the MCP server (the big ones — OAuth, confirmation gating — are already done).
