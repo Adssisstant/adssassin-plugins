@@ -8,7 +8,17 @@ easy because `adssassin.ai` is the Next.js site on Vercel.
 
 ---
 
-## Method A — token at a URL path (most likely)
+## Method A — token at a URL path (most likely)  ← scaffolded already
+**A serving route is already in `adssassin-site`** at
+`app/.well-known/openai-domain-verification.txt/route.ts`, serving
+`https://adssassin.ai/.well-known/openai-domain-verification.txt`. To use it:
+1. Set **`OPENAI_DOMAIN_VERIFICATION`** = the token OpenAI gives you, on the
+   **adssassin-site** Vercel project.
+2. Redeploy, then `curl` the URL to confirm the token is returned.
+3. Click **Verify** in the form.
+If OpenAI asks for a **different path/filename**, rename that route folder to
+match. The rest of this section is the manual fallback.
+
 OpenAI gives you a token string and a path (e.g. `/.well-known/openai-domain-verification.txt`
 or a `/.well-known/...` JSON — use whatever the form specifies).
 
