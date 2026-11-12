@@ -1,7 +1,12 @@
 {
   "name": "adssassin-google-ads",
-  "version": "0.1.0",
+  "displayName": "Adssassin — Google Ads",
+  "version": "1.0.0",
   "description": "Run Google Ads through Adssassin in your own AI — audits, wasted-spend sweeps, campaign builds, and ad copy. Bundles the Adssassin MCP and the skills that drive it.",
   "author": { "name": "Adssassin", "url": "https://adssassin.ai" },
-  "homepage": "https://adssassin.ai"
+  "homepage": "https://adssassin.ai",
+  "repository": "https://github.com/Adssisstant/adssassin-plugins",
+  "privacyPolicyUrl": "https://adssassin.ai/privacy",
+  "icon": ".claude-plugin/icon.png",
+  "keywords": ["google-ads", "ppc", "advertising", "marketing", "mcp", "ads", "optimization"]
 }
