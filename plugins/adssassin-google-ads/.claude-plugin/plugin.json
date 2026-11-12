@@ -1,6 +1,6 @@
 {
   "name": "adssassin-google-ads",
-  "displayName": "Adssassin — Google Ads",
+  "displayName": "Google Ads Claude Connector (by Adssassin AI)",
   "version": "1.0.0",
   "description": "Run Google Ads through Adssassin in your own AI — audits, wasted-spend sweeps, campaign builds, and ad copy. Bundles the Adssassin MCP and the skills that drive it.",
   "author": { "name": "Adssassin", "url": "https://adssassin.ai" },
