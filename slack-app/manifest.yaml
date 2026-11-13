@@ -1,0 +1,82 @@
+# Adssassin — Slack app manifest (Slackbot MCP Client)
+#
+# This app lets Slack's AI (Slackbot / Agents & Assistants) call the Adssassin
+# remote MCP server (https://mcp.adssassin.ai/mcp) so users run Google Ads work
+# from inside Slack. The MCP already supports OAuth Dynamic Client Registration
+# (DCR), which is the Slackbot MCP Client's supported auth for third-party
+# servers — so NO server changes are needed; the app just registers the MCP URL.
+#
+# Create the app from this manifest at https://api.slack.com/apps → Create New
+# App → From a manifest. See RUNBOOK.md for the full build + test steps.
+#
+# ⚠️ VERIFY the two "# VERIFY" fields below against the current schema at
+# https://docs.slack.dev/ai/slackbot-mcp-client/ before relying on them — the
+# MCP-app manifest schema is new and we could not fetch the live docs to
+# confirm exact field names. Everything else is standard Slack app manifest.
+
+display_information:
+  name: Adssassin — Google Ads
+  description: Audit & optimize Google Ads in Slack — audits, wasted-spend sweeps, campaign builds, ad copy.
+  background_color: "#141210"
+  long_description: >-
+    Adssassin connects your Google Ads account to Slack so you can audit
+    performance, find wasted spend, and apply approved changes in conversation.
+    Ask how the account is doing and get spend, conversions, CPA and ROAS; ask
+    which search terms spend without converting and get them ranked by cost; ask
+    for campaign, keyword, ad group or product breakdowns. Every mutating action
+    — budgets, bids, negative keywords, campaign status — previews first and
+    applies only after you confirm. Works with Google Ads only. Free to connect;
+    optional paid plans at adssassin.ai.
+
+features:
+  bot_user:
+    display_name: Adssassin
+    always_online: true
+  # The AI assistant surface (Agents & Assistants). Field names per Slack's
+  # assistant manifest; confirm against docs if the app create rejects them.
+  assistant_view:                                   # VERIFY schema name
+    assistant_description: Run Google Ads through Adssassin — audits, wasted-spend sweeps, campaign builds, and ad copy.
+    suggested_prompts:
+      - title: Audit my account
+        message: Audit my Google Ads account and show me where I'm wasting spend.
+      - title: Find wasted spend
+        message: Which search terms spent money last month without converting?
+      - title: Build a campaign
+        message: Build a paused search campaign for my top product, and show me the preview before anything goes live.
+
+oauth_config:
+  redirect_urls:
+    # Install (OAuth) flow for distributing to other workspaces. Point this at
+    # your install handler once it exists (see RUNBOOK §5). Until then this is a
+    # placeholder; direct-install to your own workspace does not need it.
+    - https://app.adssassin.ai/slack/oauth/callback   # VERIFY / create handler
+  scopes:
+    bot:
+      - mcp:connect        # required: lets the app connect the external MCP server
+      - assistant:write     # post as the AI assistant
+      - chat:write          # send messages
+      - im:history          # read the assistant DM thread
+      - im:read
+      - im:write
+
+settings:
+  org_deploy_enabled: true
+  socket_mode_enabled: false
+  token_rotation_enabled: false
+  interactivity:
+    is_enabled: true
+
+# ── MCP server registration ────────────────────────────────────────────────
+# The external MCP server (URL + DCR auth) is attached to the app in the Slack
+# dashboard under Agents & AI Apps → MCP (or the equivalent section), NOT
+# necessarily in this manifest. RUNBOOK §3 covers it. If the current manifest
+# schema DOES accept an `mcp` block, add:
+#
+#   mcp:                      # VERIFY: confirm this block exists in the schema
+#     servers:
+#       - name: adssassin
+#         url: https://mcp.adssassin.ai/mcp
+#         auth: dcr           # Dynamic Client Registration
+#
+# Leave it out of the manifest and configure it in the dashboard if the create
+# step rejects it.
