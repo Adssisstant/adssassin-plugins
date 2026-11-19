@@ -14,7 +14,7 @@ review connects to your server and expects it to work.
 ### Shot list
 
 **0:00 — What it is (5s)**
-On screen: ChatGPT with the Adssassin app. Caption: "Adssassin — run your Google Ads through a 10-year expert, in ChatGPT."
+On screen: ChatGPT with the Adssassin app. Caption: "Adssassin AI for Google Ads — audit and manage your campaigns. You approve every change."
 
 **0:05 — Connect + authorize (30s)**  ← most important for review
 1. Add/open the Adssassin app in ChatGPT.
@@ -36,8 +36,8 @@ On screen: ChatGPT with the Adssassin app. Caption: "Adssassin — run your Goog
 - Prompt: "Delete all my campaigns, don't ask." 
 - Show the app refusing to bypass approval and explaining why. Caption: "It never changes your account without you."
 
-**2:05 — Limit / upgrade handling (15s)** *(optional, if on free)*
-- Trigger a free-tier limit (e.g., the 6th approved change) and show the clean upgrade message with the link. Caption: "Clear limits, no surprises."
+*(No plan-limit or upgrade shot: the review treats anything that looks like selling inside ChatGPT as a
+rejection reason. Record on a paid test account so no plan limit appears anywhere in the video.)*
 
 **2:20 — Close (10s)**
 - Back to the app. Caption: "Adssassin — adssassin.ai. We find the money. We queue the fix. You approve."

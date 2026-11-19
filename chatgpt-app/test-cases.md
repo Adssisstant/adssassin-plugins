@@ -32,7 +32,7 @@ confirm it behaves as written — a reviewer will.
 ### P4 — Ad copy
 - **Prompt:** "Write 15 responsive search ad headlines for https://example.com."
 - **Expected:** Researches the page (`research_brand`), writes on-brand headlines within Google's character limits. Output only — nothing applied.
-- **Tools:** `plan_task`, `research_brand`, RSA generation.
+- **Tools:** `plan_task`, `research_brand`. The headlines are written in the reply; `create_responsive_search_ad` only if the user asks to add them (preview first).
 
 ### P5 — Approval-gated change
 - **Prompt:** "Pause the campaign named 'Brand - Exact'."
