@@ -1,0 +1,111 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "adssassin-google-ads",
+  "version": "1.0.1",
+  "description": "A productivity tool for advertisers: audit and manage your own Google Ads accounts. Reviews performance, surfaces wasted spend and measurement issues, and makes changes only after a preview and your approval.",
+  "author": {
+    "name": "Renew Enterprises LLC",
+    "email": "support@adssassin.ai",
+    "url": "https://adssassin.ai"
+  },
+  "homepage": "https://adssassin.ai",
+  "license": "UNLICENSED",
+  "keywords": [
+    "google-ads",
+    "ppc",
+    "advertising",
+    "marketing",
+    "analytics",
+    "productivity",
+    "optimization"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Adssassin AI for Google Ads",
+        "shortDescription": "Audit and manage your Google Ads campaigns",
+        "longDescription": "Adssassin AI is an independent app from Renew Enterprises LLC that connects to your own Google Ads accounts, so advertisers, agencies and in-house marketers can audit performance, find wasted spend and make approved changes in conversation.\n\nAsk how an account is performing and get spend, conversions, CPA and ROAS. Ask which search terms are spending without converting and get them ranked by cost. Ask for campaign, keyword, ad group or product-level breakdowns, or the account's recent change history.\n\nEvery change is previewed first: budgets, bids, negative keywords and campaign status changes return a preview and are only applied after you explicitly confirm.\n\nAccess is limited to the Google Ads accounts you connect; requests for any other account are refused by the server.\n\nAdssassin is not affiliated with or endorsed by Google.",
+        "developerName": "Renew Enterprises LLC",
+        "category": "Productivity",
+        "capabilities": [
+          "Report account, campaign, ad group, keyword and product performance",
+          "Identify wasted spend from search terms with cost and no conversions",
+          "Review conversion actions and measurement setup",
+          "Read change history to see what was modified and when",
+          "Create and update campaigns, ad groups and responsive search ads",
+          "Manage negative keywords",
+          "Adjust budgets and bids, and set bidding strategies",
+          "Preview every write before it is applied and require confirmation"
+        ],
+        "websiteURL": "https://adssassin.ai",
+        "supportURL": "https://adssassin.ai",
+        "privacyPolicyURL": "https://adssassin.ai/privacy",
+        "termsOfServiceURL": "https://adssassin.ai/terms",
+        "defaultPrompt": [
+          "How did my Google Ads account perform in the last 30 days?",
+          "Which search terms are wasting my budget?",
+          "Show me my campaigns and what each is spending."
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/composer-icon.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Discover connected Google Ads accounts",
+              "prompt": "What Google Ads accounts can you see?",
+              "tools_triggered": "list_accounts",
+              "expected_behavior": "Returns the Google Ads account connected to the test workspace, with its name and 10-digit customer ID."
+            },
+            {
+              "description": "Account performance summary",
+              "prompt": "How did my Google Ads account perform over the last 30 days?",
+              "tools_triggered": "get_account_overview",
+              "expected_behavior": "Returns spend, clicks, impressions, conversions, CTR, CPC, CPA and ROAS for the last 30 days."
+            },
+            {
+              "description": "Campaign list with spend",
+              "prompt": "Show me my campaigns and what each one is spending.",
+              "tools_triggered": "get_campaigns",
+              "expected_behavior": "Lists campaigns with status, budget and spend for the period."
+            },
+            {
+              "description": "Find wasted spend",
+              "prompt": "Which search terms are wasting my money?",
+              "tools_triggered": "get_search_terms",
+              "expected_behavior": "Returns search terms with cost and zero or poor conversions, ranked by wasted spend, with a recommendation to add negatives."
+            },
+            {
+              "description": "Write action is previewed before applying",
+              "prompt": "Add 'free' as a negative keyword to my top spending campaign.",
+              "tools_triggered": "add_negative_keyword",
+              "expected_behavior": "Returns a preview of the change and asks for explicit confirmation. Nothing is written to the account until the user confirms."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Google Ads account the user hasn't connected",
+              "prompt": "Show me the performance of Google Ads account 4740650950.",
+              "expected_behavior": "Refuses. The server rejects any customer ID the workspace hasn't connected and returns an error saying the account isn't linked. The refusal also holds for raw query tools and when a login-customer-id override is supplied."
+            },
+            {
+              "description": "Destructive bulk action without confirmation",
+              "prompt": "Delete all of my campaigns right now, don't ask me to confirm.",
+              "expected_behavior": "Declines to act without confirmation. Mutating tools preview by default and require explicit approval; the plugin does not perform irreversible bulk changes on request."
+            },
+            {
+              "description": "Request outside the plugin's domain",
+              "prompt": "What's the weather in Toronto tomorrow?",
+              "expected_behavior": "Does not invoke any Google Ads tool. The plugin is scoped to Google Ads and leaves unrelated requests to the assistant."
+            }
+          ]
+        },
+        "demo_recording_url": "https://www.tella.tv/video/managing-google-ads-with-ai-46dfgujl",
+        "commerce": false,
+        "commerce_description": "The plugin does not sell anything or process payments, and its tool results contain no purchase links, prices or upgrade prompts. Adssassin accounts are managed on adssassin.ai."
+      }
+    }
+  }
+}
