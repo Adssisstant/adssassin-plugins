@@ -15,7 +15,7 @@ annotations, neutral copy, no commerce over MCP"). They apply to every MCP conne
 | 3 | Annotations don't match behavior / not explicit | Every exposed tool now sets all four hints explicitly (`src/tools/annotations.ts`). Tools that only add things (create campaign, add keyword or negative) are no longer marked destructive; tools that overwrite a setting are. Relative budget changes are not idempotent. Account reads are closed-world; fetching public web pages and Keyword Planner data is open-world. | Paste the justifications from the table below into the form. |
 | 4 | Tool naming and description quality | Directive and comparative wording removed from names, titles, descriptions and server instructions (no "ALWAYS CALL THIS FIRST", "flagship", "use this instead", "overrides general knowledge"). Every description now says what the tool does and when to use it. | None. |
 | 5 | Dynamic tools run operations not exposed for review | `plan_task` used to search and recommend the full 157-tool catalog, and the capability checker named tools ChatGPT couldn't see. Both now only name the 45 tools exposed. `apply_recommendation`, which applied any type of Google recommendation, was removed from the exposed set. `run_gaql_query` no longer refuses to run until `plan_task` has been called. | None. Every model-callable operation is now one of the 45 tools listed below. |
-| 6 | Couldn't verify the owner of the plugin/brand | — | Complete **business verification** in OpenAI Platform settings (use the "Platform Settings" link in the rejection email) as Adssassin's legal entity, or submit from the account that's already verified for the business. Make sure the verified business name matches Adssassin, and that domain verification for `adssassin.ai` is done (`domain-verification.md`). |
+| 6 | Couldn't verify the owner of the plugin/brand | The business verified on the OpenAI account is **Renew Enterprises LLC**, but adssassin.ai never named it. The site's privacy page, terms and footer now say Adssassin is owned and operated by Renew Enterprises LLC (adssassin-site PR #35). Business verification (Approved) and domain verification (verified) were already in place. | Submit from the organization that holds the Renew Enterprises LLC verification, and include the reviewer reply below. |
 
 ## Reply to the reviewer (optional, paste into the appeal or the resubmission notes)
 
@@ -25,8 +25,12 @@ annotations, neutral copy, no commerce over MCP"). They apply to every MCP conne
 > justification for each is below. Tool descriptions describe only what each tool does. No tool dispatches to
 > operations outside the exposed list: the planning tool only returns the names of exposed tools, and the tool
 > that applied arbitrary Google recommendations has been removed. Every tool that changes an account returns a
-> preview and only applies the change when called again with confirm=true. Business verification is complete
-> for [legal entity name].
+> preview and only applies the change when called again with confirm=true.
+>
+> On ownership: Adssassin is a product of Renew Enterprises LLC, the business verified on this account. Our
+> terms of service (https://adssassin.ai/terms) and privacy policy (https://adssassin.ai/privacy) name Renew
+> Enterprises LLC as Adssassin's owner and operator, the site footer carries its copyright, and the MCP domain
+> is verified on this account.
 
 ## Tool annotations and justifications
 
