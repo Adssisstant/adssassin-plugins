@@ -23,7 +23,7 @@ Audit, report on and manage your Google Ads campaigns. You approve every change.
 
 ### Long description  ([VERIFY] a few hundred chars)
 ```
-Adssassin is an independent app that connects to your own Google Ads accounts. Ask it to audit an account, find wasted spend, research keywords, build Search campaigns, add negative keywords, or write responsive search ads. It works from your real account data. Every change is shown as a preview first and only applies when you approve it. You connect your Google Ads account through Google's sign-in and can disconnect at any time. Adssassin is an independent product and is not affiliated with or endorsed by Google.
+Adssassin is an independent app that connects to your own Google Ads accounts. Ask it to audit an account, find wasted spend, research keywords, build Search campaigns, add negative keywords, or write responsive search ads. It works from your real account data. Every change is shown as a preview first and only applies when you approve it. You connect your Google Ads account through Google's sign-in and can disconnect at any time. It is not affiliated with or endorsed by Google.
 ```
 
 ### Category  ([VERIFY] pick from the form's list)
