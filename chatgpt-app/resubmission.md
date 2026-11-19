@@ -20,7 +20,7 @@ annotations, neutral copy, no commerce over MCP"). They apply to every MCP conne
 ## Reply to the reviewer (optional, paste into the appeal or the resubmission notes)
 
 > Thanks for the review. We've addressed each point: the app is now listed as "Adssassin", with no third-party
-> names in the title and a non-affiliation statement in the description. Tool results contain no purchase links
+> names in the title and a statement in the description that it is independent of Google. Tool results contain no purchase links
 > or pricing. All 45 tools set readOnlyHint, destructiveHint, idempotentHint and openWorldHint explicitly; the
 > justification for each is below. Tool descriptions describe only what each tool does. No tool dispatches to
 > operations outside the exposed list: the planning tool only returns the names of exposed tools, and the tool
