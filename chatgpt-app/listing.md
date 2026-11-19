@@ -11,16 +11,18 @@ form and trim if it rejects.
 ```
 Adssassin
 ```
-(If the form wants a category-qualified name: `Adssassin — Google Ads`.)
+Use exactly this. The first submission was named "Google Ads Tool (Adssassin AI)" and was rejected for
+implying affiliation with a third party and using its trademark. Don't put "Google Ads", "ChatGPT" or
+"OpenAI" in the name; the descriptions can say it works *with* Google Ads accounts.
 
 ### Short description / tagline  ([VERIFY] ~ up to 80 chars)
 ```
-A 10-year Google Ads expert in ChatGPT. You approve every change.
+Audit, report on and manage your Google Ads campaigns. You approve every change.
 ```
 
 ### Long description  ([VERIFY] a few hundred chars)
 ```
-Adssassin runs your Google Ads with a decade of hands-on expert methodology — not generic advice. Ask it to audit the account, find wasted spend, research keywords, build Search campaigns, mine negative keywords, or write responsive search ads. It reads your real account data and does the work. Every change is previewed with the exact before → after and only applies when you approve it — nothing touches your account on its own. Connect with Google's own OAuth; disconnect anytime.
+Adssassin is an independent app that connects to your own Google Ads accounts. Ask it to audit an account, find wasted spend, research keywords, build Search campaigns, add negative keywords, or write responsive search ads. It works from your real account data. Every change is shown as a preview first and only applies when you approve it. You connect your Google Ads account through Google's sign-in and can disconnect at any time. Adssassin is not affiliated with or endorsed by Google or OpenAI.
 ```
 
 ### Category  ([VERIFY] pick from the form's list)

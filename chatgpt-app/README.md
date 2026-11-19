@@ -48,9 +48,10 @@ you.
 3. **Test cases** — the positive + negative cases the review requires → [`test-cases.md`](./test-cases.md)
 4. **Demo video** — reviewer-facing walkthrough → script in [`demo-video-script.md`](./demo-video-script.md)
 5. **Domain verification** — prove you own `adssassin.ai` → [`domain-verification.md`](./domain-verification.md)
-6. **Tool profile** — full set vs. curated subset (decision) → [`tool-profile.md`](./tool-profile.md)
-7. **MCP / Apps SDK conformance** — the technical audit → [`mcp-conformance.md`](./mcp-conformance.md)
-8. **App icon** — `assets/adssassin-icon-{1024,512,256}.png`
+6. **Resubmission notes** — what changed after the first rejection, and the per-tool annotation justifications → [`resubmission.md`](./resubmission.md)
+7. **Tool profile** — full set vs. curated subset (decision) → [`tool-profile.md`](./tool-profile.md)
+8. **MCP / Apps SDK conformance** — the technical audit → [`mcp-conformance.md`](./mcp-conformance.md)
+9. **App icon** — `assets/adssassin-icon-{1024,512,256}.png`
 
 ## Suggested order of operations
 1. Read [`mcp-conformance.md`](./mcp-conformance.md) and close any **[GAP]** items on the MCP server (the big ones — OAuth, confirmation gating — are already done).
