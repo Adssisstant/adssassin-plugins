@@ -9,12 +9,14 @@ form and trim if it rejects.
 
 ### App name
 ```
-Adssassin
+Adssassin AI for Google Ads
 ```
-Use exactly this. The first submission was named "Google Ads Tool (Adssassin AI)" and was rejected for
-implying affiliation with a third party and using its trademark. Don't put "Google Ads", "ChatGPT" or
-"OpenAI" in the name, and don't mention ChatGPT or OpenAI in the descriptions either (no "in ChatGPT",
-"for ChatGPT"). The descriptions can say it works *with* Google Ads accounts.
+The first submission was named "Google Ads Tool (Adssassin AI)" and was rejected for implying affiliation
+with a third party and using its trademark. This name leads with our brand and names Google Ads only as what
+it works with ("Acme for Jira" pattern). **Fallback if it's rejected on naming again:** `Adssassin`, with the
+same descriptions — nothing else needs to change.
+
+Never put "ChatGPT", "OpenAI" or "GPT" in the name or the descriptions (no "in ChatGPT", "for ChatGPT").
 
 ### Short description / tagline  ([VERIFY] ~ up to 80 chars)
 ```

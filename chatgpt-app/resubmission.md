@@ -11,7 +11,7 @@ annotations, neutral copy, no commerce over MCP"). They apply to every MCP conne
 | # | Rejection reason | What changed | Your action |
 |---|---|---|---|
 | 1 | Enables commerce for digital goods/services | Over MCP, plan limits now only state the limit ("this isn't included in this account's plan"). No upgrade links, checkout or top-up URLs, or prices appear in any tool result. | None in code. Don't mention pricing or plans in the listing, demo video or test prompts. |
-| 2 | Name/description implies affiliation or uses trademarks | Listing copy rewritten (`listing.md`): name **Adssassin**, with a non-affiliation line in the long description. | Change the app name in the dashboard from "Google Ads Tool (Adssassin AI)" to **Adssassin**, and paste the new descriptions. |
+| 2 | Name/description implies affiliation or uses trademarks | Listing copy rewritten (`listing.md`): name **Adssassin AI for Google Ads** (our brand first), no ChatGPT/OpenAI mentions, and a line saying it isn't affiliated with Google. Fallback name if rejected again: **Adssassin**. | Change the app name in the dashboard from "Google Ads Tool (Adssassin AI)" to **Adssassin AI for Google Ads**, and paste the new descriptions. |
 | 3 | Annotations don't match behavior / not explicit | Every exposed tool now sets all four hints explicitly (`src/tools/annotations.ts`). Tools that only add things (create campaign, add keyword or negative) are no longer marked destructive; tools that overwrite a setting are. Relative budget changes are not idempotent. Account reads are closed-world; fetching public web pages and Keyword Planner data is open-world. | Paste the justifications from the table below into the form. |
 | 4 | Tool naming and description quality | Directive and comparative wording removed from names, titles, descriptions and server instructions (no "ALWAYS CALL THIS FIRST", "flagship", "use this instead", "overrides general knowledge"). Every description now says what the tool does and when to use it. | None. |
 | 5 | Dynamic tools run operations not exposed for review | `plan_task` used to search and recommend the full 157-tool catalog, and the capability checker named tools ChatGPT couldn't see. Both now only name the 45 tools exposed. `apply_recommendation`, which applied any type of Google recommendation, was removed from the exposed set. `run_gaql_query` no longer refuses to run until `plan_task` has been called. | None. Every model-callable operation is now one of the 45 tools listed below. |
@@ -19,8 +19,8 @@ annotations, neutral copy, no commerce over MCP"). They apply to every MCP conne
 
 ## Reply to the reviewer (optional, paste into the appeal or the resubmission notes)
 
-> Thanks for the review. We've addressed each point: the app is now listed as "Adssassin", with no third-party
-> names in the title and a statement in the description that it is independent of Google. Tool results contain no purchase links
+> Thanks for the review. We've addressed each point: the app is now listed as "Adssassin AI for Google Ads", leading with our own brand and naming Google Ads
+> only as the product it works with and a statement in the description that it is independent of Google. Tool results contain no purchase links
 > or pricing. All 45 tools set readOnlyHint, destructiveHint, idempotentHint and openWorldHint explicitly; the
 > justification for each is below. Tool descriptions describe only what each tool does. No tool dispatches to
 > operations outside the exposed list: the planning tool only returns the names of exposed tools, and the tool
