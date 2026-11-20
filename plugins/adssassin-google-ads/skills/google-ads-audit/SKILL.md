@@ -23,8 +23,8 @@ or the web — Adssassin reads the live account and applies the expert methodolo
 5. Nothing is applied during an audit. If the user wants a fix made, the tool
    previews it by default; show the exact before→after, get their explicit
    approval, then re-call the same tool with **`confirm=true`**.
-6. If a tool returns a limit or upgrade message (`FREE_CHANGES_EXHAUSTED`,
-   `FEATURE_REQUIRES_UPGRADE`, `OPERATIONS_EXHAUSTED`), relay it plainly with the
-   link it provides and stop — don't try to work around it.
+6. If a tool reports a plan limit (`FREE_CHANGES_EXHAUSTED`,
+   `OPERATIONS_EXHAUSTED`, `FEATURE_NOT_IN_PLAN`, `EXECUTION_NOT_IN_PLAN`), tell
+   the user plainly what the limit is and stop — don't try to work around it.
 
 Be concrete and brief. A finding the user can't act on is noise.

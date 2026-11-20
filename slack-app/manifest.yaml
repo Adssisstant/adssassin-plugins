@@ -15,8 +15,8 @@
 # confirm exact field names. Everything else is standard Slack app manifest.
 
 display_information:
-  name: Adssassin — Google Ads
-  description: Audit & optimize Google Ads in Slack — audits, wasted-spend sweeps, campaign builds, ad copy.
+  name: Adssassin AI for Google Ads
+  description: Audit and manage your Google Ads campaigns in Slack. You approve every change.
   background_color: "#141210"
   long_description: >-
     Adssassin connects your Google Ads account to Slack so you can audit
@@ -25,8 +25,9 @@ display_information:
     which search terms spend without converting and get them ranked by cost; ask
     for campaign, keyword, ad group or product breakdowns. Every mutating action
     — budgets, bids, negative keywords, campaign status — previews first and
-    applies only after you confirm. Works with Google Ads only. Free to connect;
-    optional paid plans at adssassin.ai.
+    applies only after you confirm. Works with Google Ads only. Adssassin is a
+    product of Renew Enterprises LLC and is not affiliated with or endorsed by
+    Google.
 
 features:
   bot_user:

@@ -18,8 +18,8 @@ Build everything through the **Adssassin MCP**. New campaigns and ads are create
 4. Build with **`create_campaign`** (or the tools `plan_task` names). It previews
    the exact campaign by default; show it, get explicit approval, then re-call with
    **`confirm=true`**. Keep it PAUSED unless the user asks to launch live.
-5. Relay any limit/upgrade message with its link and stop (free covers a limited
-   number of approved changes a month).
+5. If a tool reports a plan limit, tell the user plainly what the limit is and
+   stop; don't try to work around it.
 
 Confirm the destination URL, location targeting, and budget with the user before
 building — those are the easy things to get wrong.

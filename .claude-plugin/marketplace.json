@@ -1,7 +1,10 @@
 {
   "name": "adssassin",
   "description": "Adssassin — Google Ads workflows and the hosted MCP, for your own AI.",
-  "owner": { "name": "Adssassin", "url": "https://adssassin.ai" },
+  "owner": {
+    "name": "Renew Enterprises LLC (Adssassin)",
+    "url": "https://adssassin.ai"
+  },
   "plugins": [
     {
       "name": "adssassin-google-ads",
