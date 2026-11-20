@@ -17,7 +17,8 @@ Work entirely through the **Adssassin MCP** against the live account.
    (campaign / ad group / shared set). This is a **preview**; nothing is applied.
 5. On the user's explicit approval, apply with **`confirm=true`** (e.g.
    `add_negative_keywords_bulk`). Report what was applied.
-6. Relay any limit/upgrade message (`FREE_CHANGES_EXHAUSTED`,
-   `OPERATIONS_EXHAUSTED`, `FEATURE_REQUIRES_UPGRADE`) with its link and stop.
+6. If a tool reports a plan limit (`FREE_CHANGES_EXHAUSTED`,
+   `OPERATIONS_EXHAUSTED`, `FEATURE_NOT_IN_PLAN`, `EXECUTION_NOT_IN_PLAN`), tell
+   the user plainly what the limit is and stop.
 
 Only mine negatives from the account's own search-term data — never invent terms.

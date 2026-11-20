@@ -18,7 +18,8 @@ MCP** — not generic templates.
 4. Show the full ad for review. To add it, use **`create_responsive_search_ad`**
    (or what `plan_task` names): it previews by default; on explicit approval,
    re-call with **`confirm=true`** against the chosen ad group.
-5. Relay any limit/upgrade message with its link and stop.
+5. If a tool reports a plan limit, tell the user plainly what the limit is and
+   stop.
 
 Respect character limits exactly, and never make trademark or superlative claims
 the business can't back up.

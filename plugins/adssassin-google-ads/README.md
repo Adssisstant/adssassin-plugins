@@ -3,8 +3,8 @@
 Bundles the **Adssassin MCP** (`https://mcp.adssassin.ai/mcp`) and the skills that
 drive it, so one install gives a Claude client the connection **and** the
 workflows. Each skill routes through the MCP: `plan_task` first, preview every
-change, apply only with `confirm=true` after approval, and relay the upgrade
-message at any limit.
+change, apply only with `confirm=true` after approval, and state any plan limit
+plainly.
 
 ## What's inside
 - `.claude-plugin/plugin.json` — plugin manifest.
