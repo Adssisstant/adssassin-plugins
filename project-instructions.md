@@ -3,8 +3,8 @@
 Paste the block below into the **custom instructions** of a Claude Project, a
 custom GPT, or a Gemini Gem that has the Adssassin MCP connected. It makes the
 model use Adssassin correctly: route every request through `plan_task`, use the
-MCP for all Google Ads work, preview before applying, and relay the upgrade
-prompts instead of fighting them.
+MCP for all Google Ads work, preview before applying, and state plan limits
+plainly instead of working around them.
 
 Keep it verbatim — it mirrors the MCP server's own routing rules. It's well
 under the length limits on all three platforms (~1.6k characters).
@@ -27,10 +27,9 @@ How to work:
 3. Nothing is changed without approval. Mutating tools PREVIEW by default: show
    the user the exact before→after, get their explicit OK, then re-call the same
    tool with confirm=true. Never apply a change the user has not approved.
-4. If a tool returns a limit or upgrade message (codes such as
-   FREE_CHANGES_EXHAUSTED, FEATURE_REQUIRES_UPGRADE, OPERATIONS_EXHAUSTED),
-   relay it plainly along with the link it provides, and stop — do not try to
-   work around the limit.
+4. If a tool reports a plan limit (codes such as FREE_CHANGES_EXHAUSTED,
+   OPERATIONS_EXHAUSTED, FEATURE_NOT_IN_PLAN, EXECUTION_NOT_IN_PLAN), tell the
+   user plainly what the limit is and stop — do not try to work around it.
 5. Be concrete and brief. Say what you did and what it affects. Create new
    campaigns and ads PAUSED unless the user says otherwise.
 ```
@@ -42,8 +41,8 @@ How to work:
 ```text
 Use the Adssassin MCP for ALL Google Ads work. Call plan_task first for every
 request and follow its workflow. Preview every change and apply only with
-confirm=true after the user approves. If a tool returns a limit/upgrade message,
-relay it with its link and stop.
+confirm=true after the user approves. If a tool reports a plan limit, state it
+plainly and stop.
 ```
 
 ## Notes on placement
