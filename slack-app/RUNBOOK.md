@@ -116,7 +116,7 @@ right the first time. Supplying the test account + demo video speeds it up.
 
 ## Listing copy (reuse across the submission)
 
-- **Name:** Adssassin — Google Ads
+- **Name:** Adssassin AI for Google Ads
 - **Tagline:** Audit & optimize Google Ads, in Slack.
 - **Short:** Run Google Ads through Adssassin in Slack — audits, wasted-spend
   sweeps, campaign builds, and ad copy. Every change previews first.
