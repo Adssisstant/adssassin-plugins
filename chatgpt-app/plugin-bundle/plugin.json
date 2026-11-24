@@ -22,7 +22,7 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Google Ads AI Agent by Adssassin",
+        "displayName": "Google Ads Agent by Adssassin",
         "shortDescription": "Audit & manage Google Ads",
         "longDescription": "Adssassin AI is an independent app from Renew Enterprises LLC that connects to your own Google Ads accounts, so advertisers, agencies and in-house marketers can audit performance, find wasted spend and make approved changes in conversation.\n\nAsk how an account is performing and get spend, conversions, CPA and ROAS. Ask which search terms are spending without converting and get them ranked by cost. Ask for campaign, keyword, ad group or product-level breakdowns, or the account's recent change history.\n\nEvery change is previewed first: budgets, bids, negative keywords and campaign status changes return a preview and are only applied after you explicitly confirm.\n\nAccess is limited to the Google Ads accounts you connect; requests for any other account are refused by the server.\n\nAdssassin is not affiliated with or endorsed by Google. Google Ads is a trademark of Google LLC.",
         "developerName": "Renew Enterprises LLC",
