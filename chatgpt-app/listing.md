@@ -9,9 +9,9 @@ form and trim if it rejects.
 
 ### App name
 ```
-Google Ads AI Agent by Adssassin
+Google Ads Agent by Adssassin
 ```
-v1.0.3 name, chosen to lead with "Google Ads" like the other Google Ads apps in the directory ("Google Ads by
+v1.0.3 name (the form caps names at 30 characters; this is 29), chosen to lead with "Google Ads" like the other Google Ads apps in the directory ("Google Ads by
 Windsor.ai", "Google Ads by Camberstack"...). "by Adssassin" names the maker, and the long description says
 it's independent of Google and that Google Ads is Google's trademark.
 

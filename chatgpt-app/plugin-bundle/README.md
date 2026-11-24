@@ -7,7 +7,7 @@ in this folder (not the folder itself), leaving out this README:
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission.zip plugin.json mcp.json skills assets
 ```
 
-v1.0.3: name "Google Ads AI Agent by Adssassin"; "Google Ads is a trademark of Google LLC." added to the
+v1.0.3: name "Google Ads Agent by Adssassin"; "Google Ads is a trademark of Google LLC." added to the
 long description; icon is the Google Ads logo mark. See ../update-1.0.3.md.
 v1.0.2: Adssassin icon instead of the Google Ads logo, 25-character subtitle.
 v1.0.1 (2026-11-19, after the first rejection): name "Adssassin AI for Google Ads", developer Renew
