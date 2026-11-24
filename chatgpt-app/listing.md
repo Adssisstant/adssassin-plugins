@@ -9,12 +9,17 @@ form and trim if it rejects.
 
 ### App name
 ```
-Adssassin AI for Google Ads
+Google Ads AI Agent by Adssassin
 ```
-The first submission was named "Google Ads Tool (Adssassin AI)" and was rejected for implying affiliation
-with a third party and using its trademark. This name leads with our brand and names Google Ads only as what
-it works with ("Acme for Jira" pattern). **Fallback if it's rejected on naming again:** `Adssassin`, with the
-same descriptions — nothing else needs to change.
+v1.0.3 name, chosen to lead with "Google Ads" like the other Google Ads apps in the directory ("Google Ads by
+Windsor.ai", "Google Ads by Camberstack"...). "by Adssassin" names the maker, and the long description says
+it's independent of Google and that Google Ads is Google's trademark.
+
+Naming history and risk: the first submission, "Google Ads Tool (Adssassin AI)", was rejected for implying
+affiliation with a third party and using its trademark. v1.0.1/v1.0.2 shipped as "Adssassin AI for Google Ads"
+(our brand first). Google's brand guidance for API products also says not to use Google product names as part
+of your own product's name. **Fallback if this name is rejected:** go back to `Adssassin AI for Google Ads`,
+which is approved; nothing else needs to change.
 
 Never put "ChatGPT", "OpenAI" or "GPT" in the name or the descriptions (no "in ChatGPT", "for ChatGPT").
 
@@ -25,7 +30,7 @@ Audit, report on and manage your Google Ads campaigns. You approve every change.
 
 ### Long description  ([VERIFY] a few hundred chars)
 ```
-Adssassin is an independent app that connects to your own Google Ads accounts. Ask it to audit an account, find wasted spend, research keywords, build Search campaigns, add negative keywords, or write responsive search ads. It works from your real account data. Every change is shown as a preview first and only applies when you approve it. You connect your Google Ads account through Google's sign-in and can disconnect at any time. It is not affiliated with or endorsed by Google.
+Adssassin is an independent app that connects to your own Google Ads accounts. Ask it to audit an account, find wasted spend, research keywords, build Search campaigns, add negative keywords, or write responsive search ads. It works from your real account data. Every change is shown as a preview first and only applies when you approve it. You connect your Google Ads account through Google's sign-in and can disconnect at any time. It is not affiliated with or endorsed by Google. Google Ads is a trademark of Google LLC.
 ```
 
 ### Category  ([VERIFY] pick from the form's list)
