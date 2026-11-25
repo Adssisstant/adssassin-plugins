@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adssassin-google-ads",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A productivity tool for advertisers: audit and manage your own Google Ads accounts. Reviews performance, surfaces wasted spend and measurement issues, and makes changes only after a preview and your approval.",
   "author": {
     "name": "Renew Enterprises LLC",
