@@ -1,6 +1,6 @@
 # Update 1.0.4 / 1.0.5: own icon after the 1.1b rejection
 
-**Submit 1.0.5, not 1.0.4.** 1.0.5 uses Adssassin's own mark (a split "A" in Adssassin red on near-black)
+**Submit 1.0.5, not 1.0.4.** 1.0.5 uses Adssassin's own mark (two rounded strokes forming an "A", in Adssassin red on white)
 instead of the Google Ads shape in red, so it no longer resembles Google's logo at all. Everything below
 applies to 1.0.5 the same way; use `adssassin-plugin-submission-1.0.5.zip`.
 
