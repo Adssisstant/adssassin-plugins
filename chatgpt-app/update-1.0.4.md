@@ -1,4 +1,8 @@
-# Update 1.0.4: own-colour icon after the 1.1b rejection
+# Update 1.0.4 / 1.0.5: own icon after the 1.1b rejection
+
+**Submit 1.0.5, not 1.0.4.** 1.0.5 uses Adssassin's own mark (a split "A" in Adssassin red on near-black)
+instead of the Google Ads shape in red, so it no longer resembles Google's logo at all. Everything below
+applies to 1.0.5 the same way; use `adssassin-plugin-submission-1.0.5.zip`.
 
 1.0.3 ("Google Ads Agent by Adssassin", Google Ads logo icon) was rejected on 2026-11-25 for
 **1.1b. Do not engage in misleading or copycat designs or impersonation.** The likeliest trigger is the
@@ -16,8 +20,8 @@ Adssassin red (three shades) on white. Name, description, tools and test cases a
 
 ## Reviewer note
 
-> Thanks for the review. Version 1.0.3 used the Google Ads logo as its icon. 1.0.4 replaces it with our own
-> icon in Adssassin's brand colours, so the app no longer uses Google's logo or colours. The listing names
+> Thanks for the review. Version 1.0.3 used the Google Ads logo as its icon. This version replaces it with
+> Adssassin's own mark in our brand colours, so the app no longer uses or resembles Google's logo. The listing names
 > its developer (Renew Enterprises LLC, the verified business on this account) and states that Adssassin is
 > not affiliated with or endorsed by Google, and that Google Ads is a trademark of Google LLC. Nothing else
 > has changed.

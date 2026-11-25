@@ -7,6 +7,8 @@ in this folder (not the folder itself), leaving out this README:
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission.zip plugin.json mcp.json skills assets
 ```
 
+v1.0.5: our own mark, a split "A" in Adssassin red (#E0524A) on near-black, replacing the 1.0.4
+red version of the Google Ads shape. A white-background version is in ../assets/adssassin-mark-light-512.png.
 v1.0.4: icon redrawn in Adssassin red on white (1.0.3 used Google's own Google Ads logo and was rejected
 under 1.1b, misleading/copycat designs or impersonation). See ../update-1.0.4.md.
 v1.0.3: name "Google Ads Agent by Adssassin"; "Google Ads is a trademark of Google LLC." added to the
