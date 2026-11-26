@@ -28,8 +28,9 @@ cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission-1.0.8.z
 4. Reviewer note:
 
 > This version updates two listing links: the homepage now points to the app's documentation
-> (adssassin.ai/docs) and the support link to its support page (adssassin.ai/support). The server, tools,
-> annotations, skills and test cases are unchanged.
+> (adssassin.ai/docs) and the support link to its support page (adssassin.ai/support). The MCP server's
+> display title now matches the listing name, "Google Ads Agent by Adssassin". Tools, annotations, skills
+> and test cases are unchanged.
 
 If the Rescan in step 1 showed new tools (`connect_google_ads`, `review_negative_keywords`,
 `show_audit_summary`, the in-chat cards, which exist only when `MCP_UI_CARDS` is on in production), the
@@ -38,13 +39,15 @@ tools did change. In that case use this note instead:
 > This version updates two listing links (homepage to adssassin.ai/docs, support to adssassin.ai/support)
 > and adds three read-only tools that render in-chat cards: a Google Ads connection status card, a review
 > card for proposed negative keywords, and an audit scorecard. Changes still apply only after the user
-> confirms; existing tools and test cases are unchanged.
+> confirms. The MCP server's display title now matches the listing name, "Google Ads Agent by Adssassin".
+> Existing tools and test cases are unchanged.
 
 ## The MCP card ("Adssassin AI for Google Ads", black "A")
 
 The card on the MCPs tab still shows the name and icon it got when the MCP was first configured in 1.0.1.
 The dashboard has no rename control. The server now publishes its own display identity in `serverInfo`
-(adssassin-google-ads-mcp #208, #209): title **Google Ads Agent**, a one-line description,
+(adssassin-google-ads-mcp #208, #209, and the follow-up that set the title): title
+**Google Ads Agent by Adssassin**, matching the listing name, a one-line description,
 `websiteUrl` https://adssassin.ai and the red Adssassin mark at
 https://mcp.adssassin.ai/brand/icon.png. The card's last scan ran about when those shipped, so it may
 predate them.
