@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adssassin-google-ads",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Google Ads agent for advertisers and agencies: audit accounts, find wasted spend and negative keywords, research keywords, build campaigns and adjust budgets and bids in your own Google Ads accounts, with every change previewed and applied only after you confirm.",
   "author": {
     "name": "Adssassin AI",
     "email": "support@adssassin.ai",
     "url": "https://adssassin.ai"
   },
-  "homepage": "https://adssassin.ai",
+  "homepage": "https://adssassin.ai/docs",
   "license": "UNLICENSED",
   "keywords": [
     "google-ads",
@@ -46,7 +46,7 @@
           "Preview every change and apply it only after you confirm"
         ],
         "websiteURL": "https://adssassin.ai",
-        "supportURL": "https://adssassin.ai",
+        "supportURL": "https://adssassin.ai/support",
         "privacyPolicyURL": "https://adssassin.ai/privacy",
         "termsOfServiceURL": "https://adssassin.ai/terms",
         "defaultPrompt": [
