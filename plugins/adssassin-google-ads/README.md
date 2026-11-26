@@ -35,6 +35,8 @@ Test the MCP connection on a personal machine first:
 claude mcp add --transport http adssassin https://mcp.adssassin.ai/mcp
 ```
 
+Full setup, tool list, approvals and plan limits: https://adssassin.ai/docs
+
 ## First run
 Ask it to work on your Google Ads — "audit account 123-456-7890", "find wasted
 spend and add negatives", or "write search ads for my landing page." The skill

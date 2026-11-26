@@ -12,6 +12,9 @@ works through their own AI — on the free tier or a paid plan.
   link to authorize their Google Ads account. No shared keys.
 - **Custom instructions:** `project-instructions.md` in this folder — the block
   users paste into their project / GPT / Gem.
+- **Public docs:** `https://adssassin.ai/docs` (setup per platform, tools, approvals,
+  plan limits, data handling, OAuth/endpoint reference). Use it as the
+  **Documentation** link on every directory listing.
 
 The user's funnel: **pricing → Start free → connect Google → copy the MCP URL →
 add it to their AI → paste the instructions → work.**
@@ -69,6 +72,15 @@ add it to their AI → paste the instructions → work.**
 
 ## A reusable submission kit (build once, list everywhere)
 
+- **Listing URLs** (the same on every directory):
+
+  | Field | URL |
+  |---|---|
+  | Website | `https://adssassin.ai` |
+  | Documentation | `https://adssassin.ai/docs` |
+  | Support | `https://adssassin.ai/support` (support@adssassin.ai) |
+  | Privacy Policy | `https://adssassin.ai/privacy` |
+  | Terms of Service | `https://adssassin.ai/terms` |
 - The hosted **MCP URL** + its `/.well-known` OAuth metadata (done).
 - The public **skills bundle** (methodology + per-task workflows that call the MCP).
 - The **custom-instructions block** (`project-instructions.md`).

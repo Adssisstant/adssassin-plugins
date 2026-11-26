@@ -37,11 +37,12 @@ Adssassin is an independent app that connects to your own Google Ads accounts. A
 Primary: **Productivity** or **Marketing / Business**
 Secondary (if allowed): **Analytics**
 
-### Required listing URLs (all four — have them ready)
+### Listing URLs (have them ready)
 | Field | Value |
 |---|---|
 | Website | `https://adssassin.ai` |
-| Support | `https://adssassin.ai` (support@adssassin.ai) — [VERIFY] whether a URL or email is expected; a mailto or a support page both work |
+| Documentation | `https://adssassin.ai/docs` (if the form has a docs field) |
+| Support | `https://adssassin.ai/support` (support@adssassin.ai) |
 | Privacy Policy | `https://adssassin.ai/privacy` |
 | Terms of Service | `https://adssassin.ai/terms` |
 
