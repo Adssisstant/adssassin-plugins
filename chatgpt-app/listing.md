@@ -25,7 +25,7 @@ Never put "ChatGPT", "OpenAI" or "GPT" in the name or the descriptions (no "in C
 
 ### Short description / tagline  (25 chars max; shipped as the card subtitle)
 ```
-Google Ads AI Agent
+AI Audit & Fix Google Ads
 ```
 
 ### Long description  ([VERIFY] a few hundred chars)

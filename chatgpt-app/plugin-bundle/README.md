@@ -7,7 +7,7 @@ in this folder (not the folder itself), leaving out this README:
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission.zip plugin.json mcp.json skills assets
 ```
 
-v1.0.8: subtitle "Google Ads AI Agent"; description opens "…is an AI agent for Google Ads"; in-chat cards
+v1.0.8: subtitle "AI Audit & Fix Google Ads"; description opens "…is an AI agent for Google Ads"; in-chat cards
 (server side, MCP_UI_CARDS=on) with review test cases for the three card tools;
 `homepage` is the documentation page (https://adssassin.ai/docs) and `supportURL` the support page
 (https://adssassin.ai/support). See ../update-1.0.8.md.
