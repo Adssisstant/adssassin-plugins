@@ -89,7 +89,25 @@
               "description": "Write action is previewed before applying",
               "prompt": "Add 'free' as a negative keyword to my top spending campaign.",
               "tools_triggered": "add_negative_keyword",
-              "expected_behavior": "Returns a preview of the change and asks for explicit confirmation. Nothing is written to the account until the user confirms."
+              "expected_behavior": "Returns a preview of the change, shown on a review card with an Approve button, and asks for explicit confirmation. Nothing is written to the account until the user approves."
+            },
+            {
+              "description": "Google Ads connection card",
+              "prompt": "Is my Google Ads account connected?",
+              "tools_triggered": "connect_google_ads",
+              "expected_behavior": "Shows a card confirming Google Ads is connected, listing the connected ad account with its name and 10-digit customer ID. For an account that isn't connected, the card shows a button that opens Google's sign-in in a new browser tab and updates by itself once the user approves."
+            },
+            {
+              "description": "Choose which negative keywords to add",
+              "prompt": "Find wasted spend and let me pick which negative keywords to add.",
+              "tools_triggered": "analyze_wasted_spend, review_negative_keywords",
+              "expected_behavior": "Shows a card listing the proposed negative keywords, each with the campaign it would be added to and what the search term cost. Nothing is added until the user approves: the card previews the change first, then applies only the terms left ticked."
+            },
+            {
+              "description": "Audit scorecard",
+              "prompt": "Audit my Google Ads account and show me the top 5 fixes.",
+              "tools_triggered": "plan_task, run_audit_phase, show_audit_summary",
+              "expected_behavior": "Runs the audit and shows a scorecard card with the findings in priority order, each with what it costs and how to fix it. Nothing is changed in the account."
             }
           ],
           "negative": [

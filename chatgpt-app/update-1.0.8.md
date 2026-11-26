@@ -1,17 +1,27 @@
-# Update 1.0.8: documentation and support links
+# Update 1.0.8: in-chat cards, documentation and support links
 
-1.0.7 was approved and is listed publicly. 1.0.8 changes two links and nothing else:
+1.0.7 was approved and is listed publicly. 1.0.8 adds:
 
-| Field | 1.0.7 | 1.0.8 |
-|---|---|---|
-| `homepage` | `https://adssassin.ai` | `https://adssassin.ai/docs` |
-| `extensions.com.openai.interface.supportURL` | `https://adssassin.ai` | `https://adssassin.ai/support` |
+1. **In-chat cards** (server side, adssassin-google-ads-mcp #210 to #214), turned on with
+   `MCP_UI_CARDS=on`. Three new read-only tools and an approval card on every change:
+   - `connect_google_ads`: connection status card. Not connected: a button that opens Google's sign-in
+     in a new tab through ChatGPT's own link opener (`openExternal`) rather than a plain link, then re-checks
+     on its own and lists the ad accounts once connected. Check in testing that a pop-up blocker doesn't stop it.
+   - `review_negative_keywords`: the proposed negatives with what each search term cost. The user unticks
+     any to keep, previews, then approves; the card calls `add_negative_keywords_bulk`.
+   - `show_audit_summary`: the audit as a scorecard, findings in priority order.
+   - Every change tool's preview appears on a review card with an Approve button.
+2. **Links** in `plugin.json`:
 
-`/docs` is the public documentation page: setup in each AI, connecting Google Ads, the tool list, how
-changes are approved, plan limits, data handling, and an OAuth/endpoint reference for IT admins. `/support`
-is the support page (contact, response time, billing, data requests).
+   | Field | 1.0.7 | 1.0.8 |
+   |---|---|---|
+   | `homepage` | `https://adssassin.ai` | `https://adssassin.ai/docs` |
+   | `interface.supportURL` | `https://adssassin.ai` | `https://adssassin.ai/support` |
 
-Tools, server, skills, test cases and listing copy are unchanged.
+3. **Review test cases** for the three card tools, and the write test now expects the review card.
+
+Also live on the server (no bundle change): the MCP display title is "Google Ads Agent by Adssassin", and
+a user who hasn't connected Google Ads gets the connect link as the first reply.
 
 ## Build the ZIP
 
@@ -19,38 +29,36 @@ Tools, server, skills, test cases and listing copy are unchanged.
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission-1.0.8.zip plugin.json mcp.json skills assets
 ```
 
-## In the OpenAI dashboard
+## Steps
 
-1. **MCPs tab → the MCP card → Rescan** before uploading (see "The MCP card" below).
-2. Upload `adssassin-plugin-submission-1.0.8.zip` as a new version.
-3. If the form has a **Documentation** field, set it to `https://adssassin.ai/docs`. Set **Support** to
+1. **Railway**: on the service that serves mcp.adssassin.ai, add the variable `MCP_UI_CARDS` = `on` and
+   let it redeploy. Check https://mcp.adssassin.ai/health: `"tools"` goes from 45 to **48**.
+2. **OpenAI dashboard → MCPs tab → the MCP card → Rescan.** The tool list should now include
+   `connect_google_ads`, `review_negative_keywords` and `show_audit_summary`. The card's name and icon
+   should update too (see "The MCP card" below).
+3. Upload `adssassin-plugin-submission-1.0.8.zip` as a new version.
+4. If the form has a **Documentation** field, set it to `https://adssassin.ai/docs`. Set **Support** to
    `https://adssassin.ai/support` if it has its own field.
-4. Reviewer note:
+5. Reviewer note:
 
-> This version updates two listing links: the homepage now points to the app's documentation
-> (adssassin.ai/docs) and the support link to its support page (adssassin.ai/support). The MCP server's
-> display title now matches the listing name, "Google Ads Agent by Adssassin". Tools, annotations, skills
-> and test cases are unchanged.
+> This version adds in-chat cards and updates two listing links. Three new read-only tools render cards: a
+> Google Ads connection status card, a review card for proposed negative keywords (the user picks which to
+> add, then previews and approves), and an audit scorecard. Every change's preview now appears on a review
+> card with an Approve button; nothing is applied until the user approves. The homepage now points to the
+> documentation (adssassin.ai/docs) and the support link to adssassin.ai/support. The MCP server's display
+> title now matches the listing name, "Google Ads Agent by Adssassin". Existing tools and test cases are
+> unchanged apart from the write test, which now shows the review card.
 
-If the Rescan in step 1 showed new tools (`connect_google_ads`, `review_negative_keywords`,
-`show_audit_summary`, the in-chat cards, which exist only when `MCP_UI_CARDS` is on in production), the
-tools did change. In that case use this note instead:
-
-> This version updates two listing links (homepage to adssassin.ai/docs, support to adssassin.ai/support)
-> and adds three read-only tools that render in-chat cards: a Google Ads connection status card, a review
-> card for proposed negative keywords, and an audit scorecard. Changes still apply only after the user
-> confirms. The MCP server's display title now matches the listing name, "Google Ads Agent by Adssassin".
-> Existing tools and test cases are unchanged.
+ChatGPT may keep using the tool list it reviewed for 1.0.7 until 1.0.8 is approved, so expect the cards
+there after approval. Claude reads the tool list live and should show them once step 1 deploys.
 
 ## The MCP card ("Adssassin AI for Google Ads", black "A")
 
 The card on the MCPs tab still shows the name and icon it got when the MCP was first configured in 1.0.1.
-The dashboard has no rename control. The server now publishes its own display identity in `serverInfo`
-(adssassin-google-ads-mcp #208, #209, and the follow-up that set the title): title
-**Google Ads Agent by Adssassin**, matching the listing name, a one-line description,
-`websiteUrl` https://adssassin.ai and the red Adssassin mark at
-https://mcp.adssassin.ai/brand/icon.png. The card's last scan ran about when those shipped, so it may
-predate them.
+The dashboard has no rename control. The server publishes its own display identity in `serverInfo`
+(adssassin-google-ads-mcp #208, #209, #215): title **Google Ads Agent by Adssassin**, a one-line
+description, `websiteUrl` https://adssassin.ai and the red Adssassin mark at
+https://mcp.adssassin.ai/brand/icon.png.
 
 1. Click **Rescan** on the card. If the name and icon update, done.
 2. If not, click **Reconnect** (re-runs the OAuth handshake and `initialize`), then **Rescan** again.
