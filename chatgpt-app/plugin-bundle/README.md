@@ -7,6 +7,9 @@ in this folder (not the folder itself), leaving out this README:
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission.zip plugin.json mcp.json skills assets
 ```
 
+v1.0.8: in-chat cards (server side, MCP_UI_CARDS=on) with review test cases for the three card tools;
+`homepage` is the documentation page (https://adssassin.ai/docs) and `supportURL` the support page
+(https://adssassin.ai/support). See ../update-1.0.8.md.
 v1.0.7: developer name "Adssassin AI" (owned by Renew Enterprises LLC, stated in the description and on
 adssassin.ai); Display removed from the campaign types claimed (Search, Shopping and Performance Max are the
 supported builds). See ../update-1.0.7.md.
