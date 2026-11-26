@@ -7,6 +7,10 @@ in this folder (not the folder itself), leaving out this README:
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission.zip plugin.json mcp.json skills assets
 ```
 
+v1.0.6: listing rewritten for directory search (see ../update-1.0.6.md): long description with headed
+sections covering everything the tools do, 12 specific capabilities, category Business & Operations, an
+audit-first starter prompt, and the four skills from the Claude plugin (audit, wasted-spend sweep, Search
+campaign build, RSA copywriter) alongside get-started.
 v1.0.5: our own mark in Adssassin red (#E0524A) on white: two rounded strokes forming an "A", replacing
 the 1.0.4 red version of the Google Ads shape. (An earlier near-black version is kept in
 ../assets/adssassin-mark-dark-512.png.)
