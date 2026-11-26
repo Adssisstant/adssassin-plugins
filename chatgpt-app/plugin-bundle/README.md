@@ -7,6 +7,9 @@ in this folder (not the folder itself), leaving out this README:
 cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission.zip plugin.json mcp.json skills assets
 ```
 
+v1.0.7: developer name "Adssassin AI" (owned by Renew Enterprises LLC, stated in the description and on
+adssassin.ai); Display removed from the campaign types claimed (Search, Shopping and Performance Max are the
+supported builds). See ../update-1.0.7.md.
 v1.0.6: listing rewritten for directory search (see ../update-1.0.6.md): long description with headed
 sections covering everything the tools do, 12 specific capabilities, category Business & Operations, an
 audit-first starter prompt, and the four skills from the Claude plugin (audit, wasted-spend sweep, Search
