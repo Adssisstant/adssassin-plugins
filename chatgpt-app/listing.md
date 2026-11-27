@@ -23,9 +23,9 @@ which is approved; nothing else needs to change.
 
 Never put "ChatGPT", "OpenAI" or "GPT" in the name or the descriptions (no "in ChatGPT", "for ChatGPT").
 
-### Short description / tagline  ([VERIFY] ~ up to 80 chars)
+### Short description / tagline  (25 chars max; shipped as the card subtitle)
 ```
-Audit, report on and manage your Google Ads campaigns. You approve every change.
+AI Audit & Fix Google Ads
 ```
 
 ### Long description  ([VERIFY] a few hundred chars)

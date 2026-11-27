@@ -19,6 +19,11 @@
    | `interface.supportURL` | `https://adssassin.ai` | `https://adssassin.ai/support` |
 
 3. **Review test cases** for the three card tools, and the write test now expects the review card.
+4. **Listing copy**: the subtitle (`shortDescription`) changes from "Audit & manage Google Ads" to
+   **"AI Audit & Fix Google Ads"**, and the long description now opens "Google Ads Agent by Adssassin is an AI agent
+   for Google Ads." The name stays "Google Ads Agent by Adssassin": "Google Ads AI Agent by Adssassin" is 32
+   characters and the form caps names at 30. If the reviewer rejects the subtitle, go back to
+   "Audit & manage Google Ads", which is approved.
 
 Also live on the server (no bundle change): the MCP display title is "Google Ads Agent by Adssassin", and
 a user who hasn't connected Google Ads gets the connect link as the first reply.
@@ -41,7 +46,8 @@ cd chatgpt-app/plugin-bundle && zip -r -X ../adssassin-plugin-submission-1.0.8.z
    `https://adssassin.ai/support` if it has its own field.
 5. Reviewer note:
 
-> This version adds in-chat cards and updates two listing links. Three new read-only tools render cards: a
+> This version adds in-chat cards, updates the subtitle to "AI Audit & Fix Google Ads" and the first line of the
+> description, and updates two listing links. Three new read-only tools render cards: a
 > Google Ads connection status card, a review card for proposed negative keywords (the user picks which to
 > add, then previews and approves), and an audit scorecard. Every change's preview now appears on a review
 > card with an Approve button; nothing is applied until the user approves. The homepage now points to the
